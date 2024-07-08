@@ -49,31 +49,7 @@ router.delete('/delete/:id', async (req, res) => {
 });
 
 // router.delete('/printreserve/:id', async (req, res) => {
-//     const { id } = req.params;
-  
-//     try {
-//       const reservation = await Reservation.findById(id);
-//       if (!reservation) {
-//         return res.status(404).json({ msg: 'Reservation not found' });
-//       }
-  
-//       // Update the restaurant's available seats
-//       const restaurant = await Restaurant.findById(reservation.restaurant);
-//       if (!restaurant) {
-//         return res.status(404).json({ msg: 'Restaurant not found' });
-//       }
-//       restaurant.available_seats += reservation.reserved_seats;
-//       await restaurant.save();
-  
-//       // Remove the reservation from the database
-//       await reservation.remove();
-  
-//       res.json({ msg: 'Reservation deleted successfully' });
-//     } catch (err) {
-//       console.error(err.message);
-//       res.status(500).send('Server Error');
-//     }
-//   });
+
 
 // Register Route
 router.post('/register', async (req, res) => {
